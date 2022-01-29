@@ -18,6 +18,6 @@ def FibNum(nums):
 
 
 if __name__ == '__main__':
-    input_n = int(input())
-    ans = FibNum(input_n)
+    input_numbers = [int(x) for x in input().split()]
+    ans = FibNum(input_numbers[0])%input_numbers[1]
     print(ans)
