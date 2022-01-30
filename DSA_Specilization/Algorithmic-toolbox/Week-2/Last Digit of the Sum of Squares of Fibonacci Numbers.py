@@ -7,7 +7,7 @@ def FibNum(n):
 
     for _ in range(n - 1):
         previous, current = current, previous + current
-        sum_ans += current
+        sum_ans += current*current
 
     return sum_ans%10
  
