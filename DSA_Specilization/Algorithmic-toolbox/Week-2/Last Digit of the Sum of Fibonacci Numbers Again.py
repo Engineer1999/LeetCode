@@ -1,17 +1,20 @@
 def FibNum(m, n):
-    if n <= 1:
-        return n
+    m = int(m%60)
+    n = int(n%60)
+    
+    if n<m:
+        n+=60
+    
     sum_ans = 0
-    previous = 0
-    current  = 1
+    current = 0
+    next  = 1
 
-    for ii in range(n - 1):
-        previous, current = current, previous + current
-        if ii+2>=m:
-            #print(ii+2, m, current)
+    for ii in range(n+1):
+        if ii>=m:
             sum_ans += current
-        
-    return sum_ans%10
+    
+        next, current = next+current, next
+    return int(sum_ans%10)
  
 if __name__ == '__main__':
     input_numbers = [int(x) for x in input().split()]
