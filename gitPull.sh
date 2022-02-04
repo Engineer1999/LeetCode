@@ -2,7 +2,7 @@
 
 GIT=`which git`
 echo $GIT
-echo "Enter the commit message: "
+echo "Enter the commit message (DO NOT use space, insted use "_"): "
 read -r commit_msg
 ${GIT} status
 echo "-------------------------------------"
